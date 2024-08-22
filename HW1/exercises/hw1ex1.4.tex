@@ -40,7 +40,7 @@ Thus, for $j = p$, the coefficient that accompanies $t^p$ is $\binom{p}{p}(-1)^{
 \[ = \sum_{j = 0}^{p-1} t^j \cdot \left[ c_j - \sum_{k = j}^{p} \binom{k}{j} (-1)^{k-j} c_k \right], \]
 which is a $(p-1)$-degree polynomial. Now, note that
 \[ \nabla^{n} m_{t} = (I-B)^{n}(m_t). \]
-One can inductively that $\nabla^n m_t$ has degree $p-n$ for any polynomial $m_t$ of degree $p$. We proved the base case previously, so assume that $\nabla^{n-1} m_t$ has degree $p-n+1$. Then, define $d_j = [\nabla^{n-1} m_t]_{t^j}$ as the coefficient that accompanies $t^j$. 
+One can inductively show that $\nabla^n m_t$ has degree $p-n$ for any polynomial $m_t$ of degree $p$. We proved the base case previously, so assume that $\nabla^{n-1} m_t$ has degree $p-n+1$. Then, define $d_j = [\nabla^{n-1} m_t]_{t^j}$ as the coefficient that accompanies $t^j$. 
 
 Since we proved that $(I-B)$ reduces by one the degree of any polynomial, it follows that $(I-B) \nabla^{n-1} m_t$ has degree $(p-n+1)-1 = p-n$. This can be verified with the following calculation:
 \[ \everymath{\displaystyle}
