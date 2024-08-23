@@ -1,0 +1,50 @@
+% chktex-file 18 chktex-file 36
+\section*{Exercise 4.}
+
+Let $f:\R^2 \mapsto \R^2$ given by 
+\[ f(x,y) = \frac{x^3 y}{x^4+y^2} \]
+if $(x,y)\neq (x,y)$ and $0$ otherwise. Show that $f$ is Gâteaux differentiable at the origin but it's not Fréchet differentiable.
+
+\textbf{Solution:}
+
+The directional derivative is:
+\[ \everymath{\displaystyle}
+\arraycolsep=1.8pt\def\arraystretch{2.5}
+\begin{array}{rcl}
+    f'(\vec{0};d) & = & \lim_{h\to 0^+} \frac{f(hd)-f(\vec{0})}{h}\\
+    & = & \lim_{h\to 0^+} \frac{h^4}{h^5+ h^3}\\
+    & = & \lim_{h\to 0^+} \frac{h}{h^2+1} = 0.
+\end{array} \]
+
+And the partial derivatives evaluated at the origin,
+\[ \everymath{\displaystyle}
+\arraycolsep=1.8pt\def\arraystretch{2.5}
+\begin{array}{rcl}
+    f'(\vec{0};e_1) & = & \lim_{h\to 0^+} \frac{f(he_1)-f(\vec{0})}{h}\\
+    & = & \lim_{h\to 0^+} \frac{h^3\cdot 0}{h^5+ 0^2}\\
+    & = & 0,
+\end{array} \]
+
+\[ \everymath{\displaystyle}
+\arraycolsep=1.8pt\def\arraystretch{2.5}
+\begin{array}{rcl}
+    f'(\vec{0};e_2) & = & \lim_{h\to 0^+} \frac{f(he_2)-f(\vec{0})}{h}\\
+    & = & \lim_{h\to 0^+} \frac{0\cdot h}{0^4+ h^3}\\
+    & = & 0.
+\end{array} \]
+
+Thus, it follows that $f'$ is linear and the Gâteaux derivative exists. On the other hand, in order to prove that $f$ is not Fréchet differentiable at the origin, assume for the sake of contradiction that it is. Then, we know that since the limit is unique,
+\[ \lim_{\|v\|\to 0} \frac{f(v)-f(\vec{0})-\ell(v)}{\|v\|} = 0, \]
+where $\ell(v) = f'(\vec{0};v) = 0$. However, by taking the curve
+\[ x(t) = t,\hspace{1em} y(t) = t^2. \]
+Then, using the uniform convergence provided by the Fréchet differentiability, 
+\[ \everymath{\displaystyle}
+\arraycolsep=1.8pt\def\arraystretch{2.5}
+\begin{array}{rcl}
+    0 = \lim_{\|v\|\to 0} \frac{f(v)-f(\vec{0})-\ell(v)}{\|v\|} & = & \lim_{t\to 0} \frac{f(x(t),y(t))- f(\vec{0}) - l(x(t),y(t))}{\|(x(t),y(t))\|}\\
+     & = & \lim_{t\to 0} \frac{\frac{t^3t^2}{t^4 + t^4}}{\sqrt{t^2 + t^4}}\\
+    & = & \lim_{t\to 0} \frac{t^5}{2t^5 \sqrt{1+t^2}}\\
+    & = & \frac{1}{2} \lim_{t\to 0} \frac{1}{\sqrt{1+t^2}}\\
+     & = & \frac{1}{2}.
+\end{array} \]
+Therefore, a contradiction.

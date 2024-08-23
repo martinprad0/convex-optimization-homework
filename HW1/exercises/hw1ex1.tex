@@ -1,0 +1,16 @@
+% chktex-file 18 chktex-file 36
+\section*{Exercise 1.}
+
+Let $f:\R^n \mapsto \R$ be a function such that $|f(x)| \leq \|x\|^2$ for every $x\in\R^n$. Show that $f$ is Fréchet differentiable in $0$.
+
+\textbf{Solution:}
+By hypothesis, $f(\vec{0}) = 0$
+\[ \everymath{\displaystyle}
+\arraycolsep=1.8pt\def\arraystretch{2.5}
+\begin{array}{rcl}
+    \lim_{\|x\|\to 0}\frac{f(x)-f(\vec{0})}{\|x\|}
+    & \leq & \lim_{\|x\|\to 0}\frac{\|x\|^2}{\|x\|}\\
+    & = & 0.
+\end{array} \]
+
+Thus, the linear function $\ell(x) = 0$ is the Fréchet derivative of $f$ at 0. 

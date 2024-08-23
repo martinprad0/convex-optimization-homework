@@ -1,0 +1,32 @@
+% chktex-file 3 chktex-file 18 chktex-file 36
+\section*{Exercise 3.}
+
+Let $f:\R^2 \mapsto \R^2$ given by 
+\[ f(x,y) = \frac{2y\exp(-x^{-2})}{y^2+\exp(-2x^{-2})} \]
+if $(x,y)\neq (x,y)$ and $0$ otherwise. Show that $f$ is Gâteaux differentiable at the origin but it's not continuous.
+
+\textbf{Solution:}
+
+Let $d = (x,y)$ be the direction where we are differentiating. We want to show that $f'(\vec{0}, d)$ exists for any $d = xe_1 + ye_2 \in \R^2$ and it's linear
+\[ \everymath{\displaystyle}
+\arraycolsep=1.8pt\def\arraystretch{2.5}
+\begin{array}{rcl}
+    f'(\vec{0};d)
+     & = & \lim_{h\to 0^+} \frac{f(\vec{0}+hd)-f(\vec{0})}{h}\\
+     & = & \lim_{h\to 0^+} \frac{2hy \exp(-(hx)^{-2})}{h(h^2y^2 + \exp(-2(hx)^{-2}))}\\
+    & = & \lim_{h\to 0^+} \frac{\exp(-(hx)^{-2})}{h^2y + \exp(-(hx)^{-2})}\\
+    \mbox{\tiny{(L'Hospital)}} & = & 0.
+\end{array} \]
+
+However, note that the function is not continuous. For instance, take the curve
+\[ x(t) = \sqrt{\frac{-1}{\ln t}},\; y(t) = t,\; t \in (0,1) \]
+Note that if we assume that $f$ is continuous, then the following limit should be unique
+\[ \everymath{\displaystyle}
+\arraycolsep=1.8pt\def\arraystretch{2.5}
+\begin{array}{rcl}
+    0 = \lim_{\|(x,y)\|\to 0} f(x,y) & = & \lim_{t \to 0^+} f(x(t),y(t))\\
+    & = & \lim_{t \to 0^+} \frac{2te^{\ln t}}{t^2 + e^{2\ln t}}\\
+    & = & \lim_{t \to 0^+} \frac{2t^2}{2t^2}\\
+    & = & 1.
+\end{array} \]
+But this would lead to a contradiction.

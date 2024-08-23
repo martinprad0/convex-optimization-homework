@@ -1,0 +1,31 @@
+% chktex-file 3 chktex-file 18 chktex-file 36
+\section*{Exercise 5.}
+
+Calculate the first 2 derivatives of the function $f(X) = \det(X)$ for a $n\times n$ symmetric matrix $X$.
+
+\textbf{Solution:}
+
+We know that for $f: \Sym_{++}^{n} \mapsto \R,\; f(X) = \ln(\det(X))$, $Df(X) = X^{-1}$. Also, the inner product here is defined as
+\[ \angles{A,B} = \tr(A^* B) \]
+Using the chain rule,
+\[ D(g\circ f) = (Dg \circ f) \circ Df \]
+Thus, by defining $h(X) = \det(X) = \exp(\ln(\det(X)))$, we obtain
+\[ \everymath{\displaystyle}
+\arraycolsep=1.8pt\def\arraystretch{2.5}
+\begin{array}{rcl}
+    Dh(X) & = & (D\exp)(\ln\det(X)) \cdot (D\ln\det)(X) \\
+    & = & \exp(\ln\det(X)) \cdot X^{-1}\\
+    & = & e^{f(X)} \cdot Df(X).
+\end{array} \]
+
+For the second derivative, we know that $Hf = D(Df)(X)(Y) = - X^{-1} Y X^{-1}$. Therefore, the Taylor approximation is
+\[ f(Z) = f(X) + \angles{X^{-1}, (Z-X)} - \frac{1}{2}\angles{X^{-1}(Z-X)X^{-1}, (Z-X)} + o(\|Z-X\|^{2}). \]
+
+With this definition, we can use the chain rule on $D(Dh)$.
+\[ \everymath{\displaystyle}
+\arraycolsep=1.8pt\def\arraystretch{2.5}
+\begin{array}{rcl}
+    D(Dh)(X)(Y) & = & D(e^{f(X)}\cdot Df(X))(Y)\\
+    & = & [Df(X)\cdot e^{f(X)}\cdot Df(X)](Y) + e^{f(X)} \cdot D(Df)(X)(Y)\\
+    & = &  e^{f(X)}(X^{-2}Y - X^{-1}Y X^{-1})
+\end{array} \]
