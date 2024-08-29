@@ -1,4 +1,29 @@
-% chktex-file 3 chktex-file 18 chktex-file 36
+% chktex-file 3 chktex-file 18 chktex-file 36 chktex-file 44
 \section*{Exercise 1.}
 
 Calculate the minimum over $\R^2_{++}$ of the function $f(x,y) = \frac{1}{xy} + x + y$.
+
+\textbf{Solution:} The function is differentiable on $\R^{2}\backslash\{0\}$. Therefore, we have derivatives in $\R^{2}_{++}$.
+
+\[ Df = \left( \begin{array}{c}
+    1-x^{-2}y^{-1}\\
+    1-x^{-1}y^{-2}
+\end{array} \right). \]
+Critical points are found when
+\[ \begin{array}{cc}
+    &x^{-2} = y\\
+    &y^{-2} = x\\[0.2em]\hline\\[-0.8em]
+    \implies& x^4 = x\\
+    \iff& x^4-x = 0
+\end{array} \]
+and since $x,y\in \R^{2}_{++}$, the only possible solution for this is when $x = y = 1$. Therefore, the only critical point is $(1,1)$. Now, the Hessian matrix is the following,
+\[ Hf (x,y) = \left[ \begin{matrix}
+    \frac{2}{x^3 y} & \frac{1}{x^2 y^2}\\
+    \frac{1}{x^2 y^2} & \frac{2}{xy^3}
+\end{matrix} \right] \]
+Then,
+\[ Hf (1,1) = \left[ \begin{matrix}
+    2 & 1\\
+    1 & 2
+\end{matrix} \right], \]
+has positive eigenvalues $\lambda_1 =3,\; \lambda_2 = 1$. Therefore, $(1,1)$ is a minimum on $\R_{++}^2$, which evaluates $f(1,1) = 3$.

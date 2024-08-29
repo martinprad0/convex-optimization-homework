@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Fedora 39) (preloaded format=pdflatex 2024.6.29)  29 AUG 2024 14:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Fedora 39) (preloaded format=pdflatex 2024.6.29)  29 AUG 2024 17:52
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -736,33 +736,33 @@ Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
  (./hw2.aux)
 \openout1 = `hw2.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-Package scrbase Info: activating english \abstractname on input line 79.
-Package scrbase Info: activating english \partname on input line 79.
-Package scrbase Info: activating english \figurename on input line 79.
-Package scrbase Info: activating english \tablename on input line 79.
-Package scrbase Info: activating english \contentsname on input line 79.
-Package scrbase Info: activating english \listfigurename on input line 79.
-Package scrbase Info: activating english \listtablename on input line 79.
-Package scrbase Info: activating english \refname on input line 79.
-Package scrbase Info: activating english \indexname on input line 79.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+Package scrbase Info: activating english \abstractname on input line 81.
+Package scrbase Info: activating english \partname on input line 81.
+Package scrbase Info: activating english \figurename on input line 81.
+Package scrbase Info: activating english \tablename on input line 81.
+Package scrbase Info: activating english \contentsname on input line 81.
+Package scrbase Info: activating english \listfigurename on input line 81.
+Package scrbase Info: activating english \listtablename on input line 81.
+Package scrbase Info: activating english \refname on input line 81.
+Package scrbase Info: activating english \indexname on input line 81.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count342
@@ -782,7 +782,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring ON on input line 79.
+Package hyperref Info: Link coloring ON on input line 81.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -823,34 +823,34 @@ Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: float package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 81.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 83.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 81.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 83.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 81.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 83.
  (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-) (|ls -1 ../exercises/*) (../exercises/hw2ex1.tex) (../exercises/hw2ex2.tex) (../exercises/hw2ex3.tex) (../exercises/hw2ex4.tex [1
+) (|ls -1 ../exercises/*) (../exercises/hw2ex1.tex) (../exercises/hw2ex2.tex [1
 
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]) (../exercises/hw2ex5.tex) [2] (./hw2.aux) ) 
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]) (../exercises/hw2ex3.tex) (../exercises/hw2ex4.tex) (../exercises/hw2ex5.tex [2]) [3] (./hw2.aux) ) 
 Here is how much of TeX's memory you used:
- 26816 strings out of 476041
- 515433 string characters out of 5793164
- 1859388 words of memory out of 6000000
- 46795 multiletter control sequences out of 15000+600000
- 522019 words of font info for 72 fonts, out of 8000000 for 9000
+ 26827 strings out of 476041
+ 515560 string characters out of 5793164
+ 1863388 words of memory out of 6000000
+ 46800 multiletter control sequences out of 15000+600000
+ 522365 words of font info for 73 fonts, out of 8000000 for 9000
  1137 hyphenation exceptions out of 8191
- 110i,8n,133p,10671b,439s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on hw2.pdf (2 pages, 103825 bytes).
+ 110i,7n,133p,10671b,546s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on hw2.pdf (3 pages, 145743 bytes).
 PDF statistics:
- 77 PDF objects out of 1000 (max. 8388607)
- 52 compressed objects within 1 object stream
- 8 named destinations out of 1000 (max. 500000)
+ 101 PDF objects out of 1000 (max. 8388607)
+ 69 compressed objects within 1 object stream
+ 13 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
