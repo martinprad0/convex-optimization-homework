@@ -1,10 +1,41 @@
-% chktex-file 3 chktex-file 18 chktex-file 36
+% chktex-file 3 chktex-file 9 chktex-file 10 chktex-file 17 chktex-file 18 chktex-file 36
 \section*{Exercise 2.}
+
+\textbf{Güler: Ex 2.9 }
 
 Consider the function $f(x,y) = x^2 + \alpha xy^2 + 2 y^4$. Show that all the parameter values except two, the origin $(0,0)$ is the only critical point of $f$.
 
-\begin{enumerate}[label=\alph*]
+\begin{enumerate}[label=\alph*)]
     \item Find the exceptional $\alpha$'s and show that $f$ has infinitely many critical points for these $\alpha$ values. Determine the nature of these critical points.
     \item Consider the values of $\alpha$'s for which the origin is the only critical point. For each $\alpha$, determine the nature of the critical point. Show that in some cases, the origin is a local minimum, but in other cases, it is a saddle point.
     \item Show that even when the origin is a saddle point, (0,0) is a local strict minimizer of $f$ on every line passing through the origin. In fact, show that, except for one line, the function $g(t) := f(td)$ satisfies $g'(0) = 0$ and $g''(0) > 0$.
 \end{enumerate}
+
+\subsection*{Solution Part (a)}
+The derivative of $f$ is
+\[ Df(x,y) = \left( \begin{array}{c}
+    2x + \alpha y^2\\
+    2\alpha x y + 8y^3
+\end{array} \right). \]
+By solving $\alpha$ in $Df(x,y) = 0$ we can find where $f$ has infinitely many critical points. Then, we get the following equations, for $x,y \neq 0$:
+\[ \everymath{\displaystyle}
+\arraycolsep=1.8pt\def\arraystretch{1.5}
+\begin{array}{rcl}
+    \alpha = \frac{-2x}{y^2}\\
+    \alpha = \frac{-8y^3}{2x y}
+\end{array} \iff \frac{-2x}{y^2} = \frac{-8y^3}{2x y} \]
+\[ \iff x^2 = 2y^4 \]
+\[ \iff y^2 = \pm \frac{x}{\sqrt{2}}. \]
+Therefore, the only parameter values where there are infinitely many solutions are:
+\[ \alpha = \frac{-2x}{y^2} =  \frac{-2x}{\pm x\cdot \sqrt{1/2}} = \pm 2\sqrt{2}.\]
+When $\alpha$ is different from these values, the chain of equivalences we made before tells us that $Df (x,y) \neq 0$ when $x,y\neq 0$. Since $Df(0,0) = 0$ for any $\alpha$, it follows that $(0,0)$ is the only critical point whenever $\alpha \neq \pm 2\sqrt{2}$.
+
+\subsection*{Solution Part (b)}
+
+The Hessian matrix is
+\[ \left[ \begin{matrix}
+    2 & 2\alpha y\\
+    2\alpha y & 2\alpha x + 24 y^2
+\end{matrix} \right] \]
+
+\subsection*{Solution Part (c)}

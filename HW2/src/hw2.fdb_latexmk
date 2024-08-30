@@ -1,9 +1,9 @@
 # Fdb version 4
-["pdflatex"] 1724971978.00191 "/home/martin/Documents/VSCode/Latex/convex-optimization-homework/HW2/src/hw2.tex" "hw2.pdf" "hw2" 1724971979.81447 0
+["pdflatex"] 1724977376.395 "/home/martin/Documents/VSCode/Latex/convex-optimization-homework/HW2/src/hw2.tex" "hw2.pdf" "hw2" 1724977377.75729 0
   "../exercises/hw2ex1.tex" 1724971885.15453 1111 266c05a8743d6355fe4d431c808c315c ""
-  "../exercises/hw2ex2.tex" 1724965360.21099 956 4d0d7c10acebe03a49a122d54f85d933 ""
-  "../exercises/hw2ex3.tex" 1724971966.31234 443 042be703d8b575ba379aa4508b6fc11c ""
-  "../exercises/hw2ex4.tex" 1724968761.63536 323 3a92522ebcdb1bc4471c60fc19db8ff1 ""
+  "../exercises/hw2ex2.tex" 1724977197.72622 2241 783c70818f1ebbc75977feb1be20109a ""
+  "../exercises/hw2ex3.tex" 1724977328.02841 480 67b9fb14aa96e11dcff93e38863a1a2e ""
+  "../exercises/hw2ex4.tex" 1724977376.09285 363 a55fc6bca65f46cebd2934b40829ae8d ""
   "../exercises/hw2ex5.tex" 1724971977.51445 674 46d845fb1f1acd5a0df83ba1c966499f ""
   "/home/martin/Documents/VSCode/Latex/convex-optimization-homework/HW2/src/hw2.tex" 1724965857.57237 3036 a8e96749a87cbf1cbd1f0dd8fcf55a31 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -203,7 +203,7 @@
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1714953600 40900 887e0dc8cac988a9e9c574af364cf837 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1719663480.05852 4547809 72a019b3ea2e5a9ca986a536dc67eb1c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1719663032 7871737 a05e94d67e1df4a02cf1ad7a792646f9 ""
-  "hw2.aux" 1724971979.56747 621 24843347520fe7193f2e4b823210da26 "pdflatex"
+  "hw2.aux" 1724977377.60886 621 24843347520fe7193f2e4b823210da26 "pdflatex"
   "hw2.tex" 1724965857.57237 3036 a8e96749a87cbf1cbd1f0dd8fcf55a31 ""
   (generated)
   "hw2.aux"
