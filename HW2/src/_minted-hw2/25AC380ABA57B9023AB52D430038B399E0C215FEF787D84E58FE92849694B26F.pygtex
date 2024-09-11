@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    \PYG{k}{def} \PYG{n+nf}{newton}\PYG{p}{(}\PYG{n}{alpha}\PYG{p}{,} \PYG{n}{gamma}\PYG{p}{,} \PYG{n}{rho}\PYG{p}{,} \PYG{n}{iterations}\PYG{p}{,} \PYG{n}{x\PYGZus{}0}\PYG{p}{,} \PYG{n}{f}\PYG{p}{,} \PYG{n}{Df}\PYG{p}{,} \PYG{n}{Hf}\PYG{p}{):}
+        \PYG{o}{...}
+        \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}
+        \PYG{k}{while} \PYG{o+ow}{not} \PYG{n}{is\PYGZus{}in\PYGZus{}domain}\PYG{p}{(}\PYG{n}{x\PYGZus{}k\PYGZus{}temp}\PYG{p}{)} \PYG{o+ow}{and} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{200}\PYG{p}{:}
+            \PYG{n}{alpha\PYGZus{}k} \PYG{o}{*=} \PYG{n}{rho}
+            \PYG{n}{x\PYGZus{}k\PYGZus{}temp} \PYG{o}{=} \PYG{n}{x\PYGZus{}k}\PYG{o}{+}\PYG{n}{alpha\PYGZus{}k}\PYG{o}{*}\PYG{n}{p\PYGZus{}k}
+            \PYG{n}{i} \PYG{o}{+=} \PYG{l+m+mi}{1}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{is\PYGZus{}in\PYGZus{}domain}\PYG{p}{(}\PYG{n}{x\PYGZus{}k\PYGZus{}temp}\PYG{p}{))}
+
+        \PYG{k}{if} \PYG{o+ow}{not} \PYG{n}{is\PYGZus{}in\PYGZus{}domain}\PYG{p}{(}\PYG{n}{x\PYGZus{}k\PYGZus{}temp}\PYG{p}{):}
+            \PYG{k}{break}
+        \PYG{n}{alpha\PYGZus{}k} \PYG{o}{=} \PYG{n}{backtracking}\PYG{p}{(}\PYG{n}{alpha\PYGZus{}k}\PYG{p}{,} \PYG{n}{gamma}\PYG{p}{,} \PYG{n}{rho}\PYG{p}{,} \PYG{n}{x\PYGZus{}k}\PYG{p}{,} \PYG{n}{f\PYGZus{}k}\PYG{p}{,} \PYG{n}{Df\PYGZus{}k}\PYG{p}{,} \PYG{n}{p\PYGZus{}k}\PYG{p}{)}
+        \PYG{o}{...}
+\end{Verbatim}

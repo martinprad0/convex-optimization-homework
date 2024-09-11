@@ -1,0 +1,20 @@
+% chktex-file 3 chktex-file 18 chktex-file 36 chktex-file 44
+\section*{Exercise 7}
+
+Consider the function $f(x) = \angles{c,x} - \sum_{j = 1}^{m} \log(1-\angles{a_j, x}) - \sum_{i = 1}^{n}\log(1-x_i^2)$. Show that $f$ is convex. 
+
+\textbf{Solution:}
+
+The sum of convex functions is convex. We must prove that for $f = f_1 + f_2 + f_3 $, $f_i$ is convex for $i = 1,2,3$. We start with $f_1(x) = \angles{c,x}$, which is linear, and thus, convex.
+
+Then,
+\[ f_2(x) =  \sum_{j = 1}^{m} -\log(1-\angles{a_j, x}) = \sum_{j = 1}^{m} f_{2,j}(x), \]
+where $f_{2,j}(x) = -\log(1-\angles{a_j, x})$. Note that 
+\[ \frac{d^2 [-\log(1-y)]}{d y^2} = \frac{1}{(1-y)^2} \geq 0,\; y \in (0,1).  \]
+Therefore, $\gamma(y) = -\log(1-y)$ is a convex function and since $f_{2,j} = \gamma \circ \angles{a_j, \cdot}$ is a composition of two convex functions, it follows that $f_{2,j}$ is convex function for every $j = 1,\ldots, m$.
+
+Finally, with a similar argument,
+\[  f_3(x) =  \sum_{i = 1}^{n} -\log(1-x_i^2) = \sum_{i = 1}^{n} f_{3,i}(x). \]
+Then, $f_{3,i} = \gamma \circ (\cdot)^2 \circ \pi_i$. Note that $\pi_i$ is a projection, and since projections are linear functions, it follows that $\pi_i$ is a convex function. The composition of these three functions is a convex function too.
+
+In conclusion $f = f_1 + \sum_{j = 1}^{m} f_{2,j}(x) + \sum_{i = 1}^{n} f_{3,i}(x)$ is a sum of convex functions, so $f$ is convex too.

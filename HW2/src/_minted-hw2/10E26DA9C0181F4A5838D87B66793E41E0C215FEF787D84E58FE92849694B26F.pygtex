@@ -1,0 +1,31 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    \PYG{k}{def} \PYG{n+nf}{newton}\PYG{p}{(}\PYG{n}{alpha}\PYG{p}{,} \PYG{n}{gamma}\PYG{p}{,} \PYG{n}{rho}\PYG{p}{,} \PYG{n}{n}\PYG{p}{,} \PYG{n}{x\PYGZus{}0}\PYG{p}{,} \PYG{n}{f}\PYG{p}{,} \PYG{n}{Df}\PYG{p}{,} \PYG{n}{Hf}\PYG{p}{):}
+        \PYG{n}{x\PYGZus{}k} \PYG{o}{=} \PYG{n}{x\PYGZus{}0}
+        \PYG{n}{x\PYGZus{}list} \PYG{o}{=} \PYG{p}{[}\PYG{n}{x\PYGZus{}k}\PYG{p}{]}
+        \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{n}\PYG{p}{):}
+            \PYG{n}{f\PYGZus{}k} \PYG{o}{=} \PYG{n}{f}\PYG{p}{(}\PYG{n}{x\PYGZus{}k}\PYG{p}{)}
+            \PYG{n}{Df\PYGZus{}k} \PYG{o}{=} \PYG{n}{Df}\PYG{p}{(}\PYG{n}{x\PYGZus{}k}\PYG{p}{)}
+            \PYG{n}{B\PYGZus{}k} \PYG{o}{=} \PYG{n}{Hf}\PYG{p}{(}\PYG{n}{x\PYGZus{}k}\PYG{p}{)}
+            \PYG{n}{p\PYGZus{}k} \PYG{o}{=} \PYG{o}{\PYGZhy{}}\PYG{n}{inv}\PYG{p}{(}\PYG{n}{B\PYGZus{}k}\PYG{p}{)}\PYG{n+nd}{@Df\PYGZus{}k}
+            \PYG{n}{alpha\PYGZus{}k} \PYG{o}{=} \PYG{n}{backtracking}\PYG{p}{(}\PYG{n}{alpha}\PYG{p}{,} \PYG{n}{gamma}\PYG{p}{,} \PYG{n}{rho}\PYG{p}{,} \PYG{n}{x\PYGZus{}k}\PYG{p}{,} \PYG{n}{f\PYGZus{}k}\PYG{p}{,} \PYG{n}{Df\PYGZus{}k}\PYG{p}{,} \PYG{n}{p\PYGZus{}k}\PYG{p}{)}
+            \PYG{n}{x\PYGZus{}k} \PYG{o}{=} \PYG{n}{x\PYGZus{}k}\PYG{o}{+}\PYG{n}{alpha\PYGZus{}k}\PYG{o}{*}\PYG{n}{p\PYGZus{}k}
+            \PYG{n}{x\PYGZus{}list}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{x\PYGZus{}k}\PYG{p}{)}
+            \PYG{k}{if} \PYG{n}{norm}\PYG{p}{(}\PYG{n}{Df\PYGZus{}k}\PYG{p}{)} \PYG{o}{\PYGZlt{}} \PYG{n}{epsilon}\PYG{p}{:}
+                \PYG{k}{break}
+        \PYG{k}{return} \PYG{n}{x\PYGZus{}list}
+
+    \PYG{k}{def} \PYG{n+nf}{gradient\PYGZus{}descent}\PYG{p}{(}\PYG{n}{alpha}\PYG{p}{,} \PYG{n}{gamma}\PYG{p}{,} \PYG{n}{rho}\PYG{p}{,} \PYG{n}{n}\PYG{p}{,} \PYG{n}{x\PYGZus{}0}\PYG{p}{,} \PYG{n}{f}\PYG{p}{,} \PYG{n}{Df}\PYG{p}{,} \PYG{n}{Hf}\PYG{p}{):}
+        \PYG{n}{x\PYGZus{}k} \PYG{o}{=} \PYG{n}{x\PYGZus{}0}
+        \PYG{n}{x\PYGZus{}list} \PYG{o}{=} \PYG{p}{[}\PYG{n}{x\PYGZus{}k}\PYG{p}{]}
+        \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{n}\PYG{p}{):}
+            \PYG{n}{f\PYGZus{}k} \PYG{o}{=} \PYG{n}{f}\PYG{p}{(}\PYG{n}{x\PYGZus{}k}\PYG{p}{)}
+            \PYG{n}{Df\PYGZus{}k} \PYG{o}{=} \PYG{n}{Df}\PYG{p}{(}\PYG{n}{x\PYGZus{}k}\PYG{p}{)}
+            \PYG{n}{p\PYGZus{}k} \PYG{o}{=} \PYG{o}{\PYGZhy{}}\PYG{n}{Df\PYGZus{}k}
+            \PYG{n}{alpha\PYGZus{}k} \PYG{o}{=} \PYG{n}{backtracking}\PYG{p}{(}\PYG{n}{alpha}\PYG{p}{,} \PYG{n}{gamma}\PYG{p}{,} \PYG{n}{rho}\PYG{p}{,} \PYG{n}{x\PYGZus{}k}\PYG{p}{,} \PYG{n}{f\PYGZus{}k}\PYG{p}{,} \PYG{n}{Df\PYGZus{}k}\PYG{p}{,} \PYG{n}{p\PYGZus{}k}\PYG{p}{)}
+            \PYG{n}{x\PYGZus{}k} \PYG{o}{=} \PYG{n}{x\PYGZus{}k}\PYG{o}{+}\PYG{n}{alpha\PYGZus{}k}\PYG{o}{*}\PYG{n}{p\PYGZus{}k}
+            \PYG{n}{x\PYGZus{}list}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{x\PYGZus{}k}\PYG{p}{)}
+            \PYG{k}{if} \PYG{n}{norm}\PYG{p}{(}\PYG{n}{Df\PYGZus{}k}\PYG{p}{)} \PYG{o}{\PYGZlt{}} \PYG{n}{epsilon}\PYG{p}{:}
+                \PYG{k}{break}
+
+        \PYG{k}{return} \PYG{n}{x\PYGZus{}list}
+\end{Verbatim}

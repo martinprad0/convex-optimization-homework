@@ -32,10 +32,38 @@ When $\alpha$ is different from these values, the chain of equivalences we made 
 
 \subsection*{Solution Part (b)}
 
-The Hessian matrix is
+The Hessian matrix is degenerate at (0,0), so I looked at Geogebra for a hint of the answer, it seems that when $\alpha \in [-2\sqrt{2}, 2\sqrt{2}]$, it is a minimum and a saddle point at $ \alpha \in (-\infty, -2\sqrt{2}) \cup (2\sqrt{2}, \infty)$.
 \[ \left[ \begin{matrix}
     2 & 2\alpha y\\
     2\alpha y & 2\alpha x + 24 y^2
+\end{matrix} \right]\Big|_{(0,0)} = \left[ \begin{matrix}
+    2 & 0\\
+    0 & 0
 \end{matrix} \right] \]
 
+To justify that, we must complete a square in the previous expression to show that for every $(x,y) \neq (0,0)$ the function doesn't decrease:
+\[ \everymath{\displaystyle}
+\arraycolsep=1.8pt\def\arraystretch{2.5}
+\begin{array}{rcl}
+    x^2 + \alpha xy^2 + 2 y^4 & = & \left( x^2 + \alpha xy^2 + \frac{1}{4}\alpha^2 y^4 \right) - \frac{1}{4}\alpha^2 y^4 + 2y^4\\
+    & = & \left( x+ \frac{\alpha y^2}{2} \right)^2 + y^4 \left( 2- \frac{\alpha^2}{4} \right)
+\end{array} \]
+If $|\alpha| \leq 2\sqrt{2}$, then $\frac{\alpha^2}{4} \leq 2$. Therefore,
+\[ y^4 \left( 2- \frac{\alpha^2}{4} \right) \geq 0, \]
+and if $x,y \neq 0$, then
+\[ \left( x+ \frac{\alpha y^2}{2} \right)^2 \geq 0. \]
+It follows that $(0,0)$ is a global minimum, since every slight deviation from the origin will make $f$ stay the same or increase. Now, for the case when $|\alpha| > 2 \sqrt{2}$ the oposite happens when we consider the following curve,
+\[ x(t) = -\frac{\alpha t^2}{2},\hspace{1em} y(t) = t. \]
+If $|\alpha| > 2\sqrt{2}$, then $\frac{\alpha^2}{4} > 2$. Therefore, when $t \neq 0$
+\[ t^4 \left( 2- \frac{\alpha^2}{4} \right) < 0, \]
+and
+\[ \left( x(t) + \frac{\alpha y(t)^2}{2} \right)^2 = \left( -\frac{\alpha t^2}{2} + \frac{\alpha t^2}{2} \right)^2 = 0. \]
+Therefore, function evaluated on the curve $(x(t), y(t))$ decreases when $t \neq 0$.
 \subsection*{Solution Part (c)}
+
+Let $d = (x_0,y_0)$. Then
+\[ g(t) = f(tx_0, t y_0) = t^2 x_0^2 + \alpha t^3 x_0 y_0^2 + 2 t^4 y_0^4, \]
+\[ g'(t) = 2t x_0^2 + 3\alpha t^2 x_0 y_0^2 + 8 t^3 y_0^4, \]
+\[ g''(t) = 2x_0^2 + 6 \alpha t x_0 y_0^2 + 24 t^2 y_0^4. \]
+It's clear that $g'(0) = 0$ for every $d \in \R^2\backslash\{\vec{0}\}$ and $g''(0) = 2 x_0^2 > 0$ whenever $x_0 \neq 0$. Therefore, we know for sure that $t = 0$ minimizes $g$ in every line except for $(x(t), y(t)) = (0,t)$.
+

@@ -1,0 +1,80 @@
+% chktex-file 3 chktex-file 18 chktex-file 36 chktex-file 44
+
+% Güler 4.11
+\section*{Exercise 5}
+
+\textbf{Exercise 11, Chapter 4: Güler.} Let $f: C \to \R$ be a twice Fréchet differentiable function on a convex open set $C\subseteq \R^n$. The following statements are known to be equivalent:
+\begin{enumerate}[label=(\alph*)]
+    \item $f$ is convex.
+    \item $f(y) \geq f(x) + \angles{\nabla f(x), y-x}$ for all $x,y\in C$.
+    \item $\angles{\nabla f(y) - \nabla f(x), y-x} \geq 0$ for all $x,y \in C$.
+    \item $ H f(x)$ is positive semidefinite at every $x \in C$.
+\end{enumerate}
+
+In fact, we have proved that (a), (b), and (d) are equivalent conditions. Give direct proof of
+
+\textbf{Solution:}
+
+\hspace*{-3em} (b) $\implies$ (c):
+
+By hypothesis we have for any $x,y\in C$
+\[ \everymath{\displaystyle}
+\arraycolsep=1.8pt\def\arraystretch{1.5}
+\begin{array}{rcl}
+    f(y) & \geq & f(x) + \angles{\nabla f(x), y-x} \\
+    f(x) & \geq & f(y) + \angles{\nabla f(y), x-y} 
+\end{array}\]
+By summing both inequalities we obtain
+\[ \everymath{\displaystyle}
+\arraycolsep=1.8pt\def\arraystretch{1.5}
+\begin{array}{rrcl}
+    & f(x)+f(y) & \geq & f(x)+f(y) + \angles{\nabla f(x) - \nabla f(y), y-x} \\
+    \iff & 0 & \geq & \angles{\nabla f(x) - \nabla f(y), y-x}.\\
+\end{array} \]
+
+\hspace*{-3em} (c) $\implies$ (b): \textbf{Hint:} First, show that the function $g(t) :=f (x+t(y-x))-t\angles{\nabla f(x), y-x}$ is differentiable and nondecreasing.
+
+So let $g(t) = f (x+t(y-x))-t\angles{\nabla f(x), y-x}$, and note that $g$ is a composition and sum of differentiable functions. So using chain rule,
+\[ \everymath{\displaystyle}
+\arraycolsep=1.8pt\def\arraystretch{2}
+\begin{array}{rcl}
+    g'(t) & = & \angles{\nabla f(x + t(y-x)), y-x} - \angles{\nabla f(x), y-x}\\
+    & = & \angles{\nabla f(x + t(y-x)) - \nabla f(x), y-x}.
+\end{array} \]
+From the hypothesis, we know that
+\[ \everymath{\displaystyle}
+\arraycolsep=1.8pt\def\arraystretch{2}
+\begin{array}{rcl}
+    0 & \leq & \angles{\nabla f(x + t(y-x)) - \nabla f(x),\;\; x+t(y-x) - x}\\
+    & = &  \angles{\nabla f(x + t(y-x)) - \nabla f(x),\;\; t(y-x)}\\
+    & = & t g'(t)
+\end{array}  \]
+Since $t > 0$, it follows that $g'(t) \geq 0$, and thus, $g$ is non decreasing. Therefore, 
+\[ f(y) - \angles{\nabla f(x), y-x} = g(1) \geq g(0) = f(x)  \]
+\[ \implies f(y) \geq f(x) + \angles{\nabla f(x), y-x}. \]
+
+
+\hspace*{-3em} (c) $\implies$ (d):
+
+Let $y = x + td$ for a fixed $d$. Then, by hypothesis
+\[ \everymath{\displaystyle}
+\arraycolsep=1.8pt\def\arraystretch{1.2}
+\begin{array}{rcl}
+    f(x) + t\angles{ \nabla f(x), d} + \frac{t^2}{2}\angles{H f(x)(d), d} + O(t^3) & = & f(x + td)\\
+    & = & f(y)\\
+    & \geq & f(x) + \angles{\nabla f(x), y-x}\\
+    & = & f(x) + t\angles{\nabla f(x), d}.
+\end{array} \]
+Therefore,
+\[ \frac{t^2}{2}\angles{H f(x)(d), d} + O(t^3) \geq 0 \]
+For a sufficiently small $t$, the absolute value of $\frac{t^2}{2}\angles{H f(x)(d), d}$ is greater that the error $O(t^3)$. Therefore, we can conclude that for every $d \in \R^n$
+\[ \angles{H f(x)(d), d} \geq 0. \]
+
+\hspace*{-3em} (d) $\implies$ (c):
+
+Using mean value theorem, there exists $z_1, z_2 \in C$ such that
+\[ f(y) = f(x) + \angles{\nabla f(x), y-x} + \frac{1}{2} \angles{Hf(z_1)(y-x), y-x} \geq f(x) + \angles{\nabla f(x), y-x} \]
+\[ f(x) = f(y) + \angles{\nabla f(y), x-y} + \frac{1}{2} \angles{Hf(z_2)(x-y), x-y} \geq f(x) - \angles{\nabla f(y), y-x} \]
+Therefore, by summing both inequalities we obtain
+\[ f(x) + f(y) \geq f(x) + f(y) + \angles{\nabla f(x) - \nabla f(y), y-x}\]
+\[ \implies \angles{\nabla f(y) - \nabla f(x), y-x} \geq 0. \]

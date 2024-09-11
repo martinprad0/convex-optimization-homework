@@ -1,0 +1,54 @@
+% chktex-file 3 chktex-file 18 chktex-file 36 chktex-file 44
+
+\section*{Exercise 4}
+
+Let $f: \R\to \R$. Show that $f$ is not decreasing if and only if there exists $\varphi$ differentiable and convex such that $f = \varphi'$.
+
+\textbf{Solution:} 
+
+\hspace*{-3em}$\boldsymbol{\impliedby:}$ 
+
+We use the following theorem for this implication.
+
+\textbf{Theorem 4.27.} Let $C$ be a convex set in $\R^n$, and let $f$ be a Gâteaux differentiable function on an open set containing $C$.
+
+Then $f$ is convex on $C$ if and only if the tangent plane at any point $x\in C$ lies below the graph of $f$, that is,
+\[ f(y) \geq f(x) + \angles{\nabla f(x), y-x}\; \mbox{for all $x,y\in C$}. \]
+\begin{proof}[]
+\end{proof}
+
+If $\varphi$ is a convex differentiable function, then we have that for every $x < y \in \R$
+\[ \everymath{\displaystyle}
+\arraycolsep=1.8pt\def\arraystretch{2.5}
+\begin{array}{rrcl}
+    & \varphi(x) + \varphi'(x)(y-x) & \leq & \varphi(y)\\
+    & \varphi(y) + \varphi'(y)(x-y) & \leq & \varphi(x)\\
+\end{array} \]
+By adding both inequalities we obtain
+\[ \everymath{\displaystyle}
+\arraycolsep=1.8pt\def\arraystretch{2.5}
+\begin{array}{rrcl}
+    & \varphi(x)+\varphi(y) + (\varphi'(x) - \varphi'(y))(y-x) & \leq & \varphi(x)+\varphi(y)\\
+    \iff & (\varphi'(x) - \varphi'(y))(y-x) & \leq & 0.\\
+\end{array} \]
+Since $y-x > 0$, we must have that
+\[ f(x) = \varphi'(x) \leq \varphi'(y) = f(y),\; \mbox{for every $x,y\in \R$}. \]
+
+
+\hspace*{-3em}$\boldsymbol{\implies:}$ 
+
+I'm going to assume that $f$ is continuous so we can actually define a primitive. Let $\varphi$ be the primitive of $f$ and define for fixed $x<y\in \R$, the function $\gamma: [0,1] \to \R$ as follows
+\[ \gamma(t) = \varphi((1-t)x + t y). \]
+Note that $\gamma(0) = x$ and $\gamma(1) = y$. Then, we have that
+\[ \frac{d\gamma}{dt}(t) = \gamma'(t) = (y-x)\cdot f((1-t)x + t y), \]
+and by monotonicity of $f$ we have that $\gamma'$ is non decreasing too. Finally, we have that
+\[ \everymath{\displaystyle}
+\arraycolsep=1.8pt\def\arraystretch{2.5}
+\begin{array}{rcl}
+    \varphi(y) & = & \gamma(1) - \gamma(0) + \gamma(0)\\
+    & = & \int_0^{1} \gamma'(r) dr + \gamma(0)\\
+    & \geq & \int_0^{1} \gamma'(0) dr + \gamma(0)\\
+    & = & \gamma'(0) + \gamma(0)\\
+    & = & (y-x) \varphi'(x) + \varphi(x).
+\end{array} \]
+Since $x,y$ were arbitrary, we can use theorem 4.27 to conclude that $\varphi$ is a convex function.

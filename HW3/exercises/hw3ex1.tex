@@ -1,0 +1,35 @@
+% chktex-file 3 chktex-file 18 chktex-file 36 chktex-file 44
+
+% Güler 4.3
+
+\section*{Exercise 1}
+
+\textbf{Exercise 3, Chapter 4: Güler.} Let $K_1$ and $K_2$ be convex cones in a vector space $E$. Show that $K_1 + K_2\subseteq \co(K_1\cup K_2)$, and if both cones contain the origin, then $K_1 + K_2 = \co(K_1\cup K_2)$.
+
+\textbf{Solution:} We're going to transcribe some definitions,
+
+\textbf{Definition 4.17.} A set $K$ in a vector space $E$ is called a cone if $tx \in K$ whenever $t > 0$ and $x \in K$. If $K$ is also a convex set, then it is called a convex cone.
+
+\textbf{Definition~???} The sum of two sets is defined as follows,
+\[ K_1+K_2 = \{x_1+x_2 \;:\; x_1 \in K_1,\; x_2 \in K_2\}. \]
+
+\textbf{Definition 4.10.} Let $A \subseteq E$ be a nonempty set. The convex hull of $A$ is the set of all convex combinations of points from $A$, that is,
+\[ \co(A) = \left\{ \sum_{i = 1}^{k}\lambda_i x_i \;:\; x_i \in A,\; \sum_{i = 1}^{k} \lambda_i = 1,\; \lambda_i \geq 0,\; k\geq 1 \right\}. \]
+
+From the definitions is clear that since $K_1$ and $K_2$ are convex cones, $2x_1 \in K_1$ and $2x_2 \in K_2$. Also, by taking $\lambda_i = \frac{1}{2}$ and $x_i = 2k_i$,
+\[ k_1 + k_2 = \sum_{i = 1}^{2} \frac{1}{2} \cdot 2 k_i = \sum_{i = 1}^{2} \lambda_i x_i,\hspace{2em} x_i \in K_1 \cup K_2,\; \sum_{i = 1}^2 \lambda_i = 1,\; \lambda_i \geq 0 .\]
+Therefore, it's easy to see that $K_1+K_2 \subseteq \co(K_1\cup K_2)$.
+
+On the other hand, for the other inclusion, we use the following theorem:
+
+\textbf{Theorem 4.11.} Let $A \neq \emptyset$ be a subset of an affine space $E$. Then $\co(A)$ is a convex set; in fact, $\co(A)$ is the smallest convex set containing $A$.
+\begin{proof}[]
+\end{proof}
+
+it's clear that $K_1 \cup K_2 \subset K_1+K_2$. Now let $\lambda \in [0,1]$ and note that for $(1-\lambda) x + \lambda y$ we have two possible scenarios:
+\begin{itemize}
+    \item If both $x,y$ are in the same set $K_i$, $i = 1,2$, then $(1-\lambda) x + \lambda y\in K_i \subseteq K_1+K_2$ because $K_1$ and $K_2$ are convex sets.
+    \item If $x \in K_1$ and $y \in K_2$, then $(1-\lambda) x \in K_1$ and $\lambda y \in K_2$ if $\lambda \in (0,1)$. For the case when $\lambda = 0$ or $\lambda = 1$, $(1-\lambda) x = 0$ or $\lambda y = 0$. In this case we use the hypothesis $0 \in K_1 \cap K_2$ to conclude that $(1-\lambda) x + \lambda y \in K_1 + K_2$ for $\lambda \in [0,1]$.
+\end{itemize}
+
+This proves that $K_1 + K_2$ is a convex set that contains $K_1\cup K_2$. Therefore, using Theorem 4.11 we conclude that $\co(K_1\cup K_2) \subseteq K_1+ K_2$.

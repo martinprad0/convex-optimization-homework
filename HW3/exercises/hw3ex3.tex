@@ -1,0 +1,87 @@
+% chktex-file 3 chktex-file 9 chktex-file 18 chktex-file 36 chktex-file 44
+
+% 2.12 Boyd
+
+\section*{Exercise 3}
+
+\textbf{Exercise 12, Chapter 2: Boyd.} Which of the following sets are convex?
+\begin{enumerate}[label = (\alph*)]
+    \item A \textit{slab}, i.e., a set of the form $\{x \in\R^n \;|\; \alpha \leq a^T x \leq \beta\}$
+    \item A \textit{rectangle}, i.e., a set of the form $\{x \in \R^n \;|\; \alpha_i \leq x_i \leq b_i,\; i = 1,\ldots, n\}$. A rectangle is sometimes called a \textit{hyperrectangle} when $n>2$. 
+    \item A \textit{wedge}, i.e., $\{ x \in \R^{n} \;|\; a_1^T x \leq b_1,\; a_2^T x \leq b_2\}$.
+    \item The set of points closer to a given point than a given set, i.e.,
+    \[ \{x \;|\; \|x-x_0\|_2 \leq \|x-y\|_2 \; \mbox{for all $y \in S$} \} \]
+    where $S\subset \R^n$.
+    \item The set of points closer to one set than another, i.e.,
+    \[ \{x \;|\; \dist(x,S) \leq \dist(x,T)\}, \]
+    where $S,T\subseteq \R^n$, and
+    \[ \dist(x,S) = \inf\{\|x-z\|_2 \;|\; z\in S\} \]
+    \item The set $\{x \;|\; x+S_2 \subseteq S_1\}$, where $S_1,S_2\subseteq \R^n$ with $S_1$ convex.
+    \item The set of points whose distance to $a$ does not exceed a fixed fraction $\theta$ of the distance to $b$, i.e., the set $\{x \;|\; \|x - a\|_2 \leq \theta\|x - b\|_2 \}$. You can assume $a\neq b$ and $0 \leq \theta \leq 1$.
+\end{enumerate}
+
+\subsection*{Solution Item (a)}
+
+\textbf{It is convex}
+
+For $x,y \in \{x \in\R^n \;|\; \alpha \leq a^T x \leq \beta\}$, we have that 
+\[ \alpha \leq \begin{array}{c}
+    a^T x\\
+    a^T y
+\end{array} \leq \beta. \]
+Then, for every $t \in [0,1]$
+\[ \alpha = (1-t)\alpha + t\alpha \leq (1-t) x + t y \leq (1-t)\beta + t\beta \leq \beta. \]
+So for every $x,y$ in the slab, the line $(1-t) x + t y$ is also in the set.
+
+\subsection*{Solution Item (b)}
+
+\textbf{It is convex}
+
+Let $x,y \in \{x \in \R^n \;|\; \alpha_i \leq x_i \leq b_i,\; i = 1,\ldots, n\}$, and define for $t\in [0,1]$, $z(t) = (1-t)x + t y$ and $z_i(t) = (z(t))_i = (1-t)x_i + t y_i$. Similar to the previous item, for every $i = 1,\ldots, n$:
+\[ a_i = (1-t)a_i + ta_i \leq \underbrace{(1-t)x_i + t y_i}_{z_i(t)} \leq (1-t) b_i + t b_i = b_i \]
+Therefore, $z(t)$ is in the rectangle for every $t \in [0,1]$
+
+\subsection*{Solution Item (c)}
+
+\textbf{It is convex}
+
+Let $x,y \in \{ x \in \R^{n} \;|\; a_1^T x \leq b_1,\; a_2^T x \leq b_2\}$. We apply the same argument as the previous two items
+\[ a_i^T ((1-t)x+ty) = (1-t) a_i^T x + t a_i^T y \leq (1-t) b_i + t b_i = b_i. \]
+Therefore, $(1-t)x+ty$ is also in the wedge for every $t\in [0,1]$.
+
+\subsection*{Solution Item (d)}
+
+\textbf{It is convex}
+
+Since convexity is preserved by the intersection between convex sets, it follows that
+
+\[ \{x \;|\; \|x-x_0\|_2 \leq \|x-y\|_2 \; \forall y \in S \} = \bigcap_{y \in S}  \underbrace{\{x \;|\; \|x-x_0\|_2 \leq \|x-y\|_2 \}}_{= C_y}\]
+
+Now, we want to prove that $C_y$ is convex for every $y \in S$. Then, let $R_y = \|y-x_0\|$. Using \textbf{Example 2.12} we know that every closed ball is convex and $C_y = \ol{B_{R_y}(x_0)}$. Therefore, the intersection of every ball it's convex.
+
+\subsection*{Solution Item (e)}
+
+\textbf{It is NOT convex}
+
+Take the sets $S = \{-2,2\}$ and $T = \{0\}$ in $\R$. Then, $\{x \;|\; \dist(x,S) \leq \dist(x,T)\} = (-\infty,-1] \cup [1,\infty)$ which is not connected and thus, it is not convex.
+
+\subsection*{Solution Item (f)}
+
+\textbf{It is convex}
+
+Let $x,y \in \{x \;|\; x+S_2 \subseteq S_1\}$. Let $z \in S_2$ and note that $x+z \in S_1$ and $y+z \in S_1$ by definition. Since $S_1$ is convex it follows that $(1-t)(x+z) + t(y+z) \in S_1$ for $t \in [0,1]$. Therefore,
+\[ (1-t)x+ty + z = (1-t)(x+z) + t(y+z) \in S_1,\; \forall z \in S_2 \]
+\[  \implies (1-t)x+ty + S_2 \subseteq S_1. \]
+
+\subsection*{Solution Item (g)}
+
+\textbf{It is convex}
+
+Let $x,y \in \{x \;|\; \|x - a\| \leq \theta\|x - b\| \}$. Then, for $t \in [0,1]$. Then, using parallelogram rule
+\[ \everymath{\displaystyle}
+\arraycolsep=1.8pt\def\arraystretch{2.5}
+\begin{array}{rcl}
+    \|x-a\|^2 - \theta^2 \|x-b\|^2 & = & \angles{x,x}+2\angles{x,a}+\angles{a,a} - \theta^2 \angles{x,x}+2\theta^2\angles{x,b}+\theta^2\angles{b,b}\\
+    & = & (1-\theta^2 )\angles{x,x} + 2 \angles{x,a-\theta^2 b} + \angles{a,a}-\angles{\theta b,\theta b} \leq 0.
+\end{array} \]
+This quadratic inequation describes a convex set using exercise 2, because $(1-\theta^2) \angles{x,x} = x^T (1-\theta^2) I x$, and since, $0\leq \theta^2 \leq 1$, it follows that the matrix $ (1-\theta^2) I$ is semidefinite positive.
